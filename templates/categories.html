@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Different categories of quizzes available</title>
+</head>
+<body>
+	<h1> Quiz Categories: </h1>
+	<h2> Select one to make a quiz
+	{% for value in data %}
+		<h3> {{ value[1] }}  <a href="{{url_for('quizform',quizid=value[0]) }}"> Go </a> </h3> 
+	{% endfor %}
+
+
+
+</body>
+</html>

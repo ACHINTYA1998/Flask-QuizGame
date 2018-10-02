@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Select the category, difficulty and type of questions you want:</title>
+</head>
+<body>
+	<form method="POST" action="{{url_for('makequiz')}}">
+		Choose quiz category: <select name="category">
+		{% for item in data %}
+		<option value="{{item[0]}}"> {{item[1]}} </option>
+		{% endfor %}
+		 </select>
+		 <input type="radio" name="difficulty" value="easy"> Easy
+		 <input type="radio" name="difficulty" value="medium"> Medium
+		 <input type="radio" name="difficulty" value="hard"> Hard
+		<input type="submit" value="Start quizzing"> 
+	</form>
+</body>
+</html>

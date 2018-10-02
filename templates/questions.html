@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Quiz </title>
+</head>
+<body>
+	<form method="POST" action="{{url_for('result')}}">
+	{% for question in questions %}
+	<h3> {{question['question']}} </h3>
+	<input type="radio" name="{{question['correct']}}" value="{{question['answers'][0]}}"> {{question['answers'][0]}}
+	<input type="radio" name="{{question['correct']}}" value="{{question['answers'][1]}}"> {{question['answers'][1]}}
+	<input type="radio" name="{{question['correct']}}" value="{{question['answers'][2]}}"> {{question['answers'][2]}}
+	<input type="radio" name="{{question['correct']}}" value="{{question['answers'][3]}}"> {{question['answers'][3]}}
+	{% endfor %}
+	<br> <br>
+	<input type="submit" value="End Quiz">
+
+	</form>
+
+
+</body>
+</html>

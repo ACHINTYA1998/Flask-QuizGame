@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz question criteria</title>
+</head>
+<body>
+	<h1> {{val}} </h1>
+	<form action="" method="POST"> 
+	<h3>	Choose difficulty level: </h3>
+		<input type="radio" name="level" value="Easy"> Easy 
+		<input type="radio" name="level" value="Medium"> Medium 
+		<input type="radio" name="level" value="Hard"> Hard
+	<h3> Choose question type: </h3>
+		<input type="radio" name="qtype" value="Multiple Choice"> Multiple Choice
+		<input type="radio" name="qtype" value="True/False"> True/False
+		<br>
+		<input type="checkbox" name="id" value="{{val}}" checked style="visibility: hidden">
+		<br> <br>
+	<input type="submit" value="Generate Quiz"> 
+	</form>
+</body>
+</html>
